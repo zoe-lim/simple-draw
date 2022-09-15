@@ -1,0 +1,227 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    margin-right: 8px;
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Segoe Print;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+/*--style header text--*/
+h1 {
+    font-family: Segoe Print;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+/*--style all buttons in header--*/
+#saveImageButton, #clearButton{
+    background-color: azure;
+    color: darkslategray;
+    font-family: "Segoe Print";
+    border: none;
+    border-radius: 25px;
+    float: right;
+    margin: 8px;
+}
+#saveImageButton:hover, #clearButton:hover {
+    background-color: skyblue;
+}
+#saveImageButton:active, #clearButton:active {
+    background-color: cornflowerblue;
+}
+
+/*--style colour picker & slider--*/
+.topOptions {
+    float: right;
+
+}
+label{
+    font-family: Segoe Print;
+    font-size: 18px;
+    padding: 2px;
+    color: darkslategray;
+}
+    /*--for colour picker--*/
+    .picker{
+        padding-top: 40px;
+    }
+    #Colours {
+        margin: 8px;
+        border-radius: 5px;
+        background-color: azure
+    }
+    #Colours:hover {
+        background-color: skyblue;
+    }
+    #Colours:active {
+        background-color: cornflowerblue;
+    }
+
+    /*--for slider--*/
+    .slider {
+        -webkit-appearance: none;
+        width: 200px;
+        height: 15px;
+        border-radius: 5px;
+        background-color: mediumturquoise;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    .slider:hover {
+        opacity: 1;
+    }
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: darkcyan;
+        cursor: pointer;
+    }
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #04AA6D;
+        cursor: pointer;
+    }
+    #output {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+/*--style sidebar--*/
+.sideBarItem{
+    max-height: 50px;
+    max-width: 50px;
+    padding:5px;
+    border-radius: 28px;
+}
+.sideBarItem img{
+    max-height: 50px;
+    max-Width:50px;
+    border-radius: 25px;
+}
+
+/*--style colour palette--*/
+.colourPalette{
+    grid-area: colourP; /*--set grid area--*/
+    display:flex;
+    flex-direction:grid;
+    flex-flow:wrap;
+    width: 100%;
+    padding: 8px; 
+}
+
+/*--style additional options of tools--*/
+.options{
+    grid-area: options;
+    flex-direction: grid;
+    flex-flow: wrap;
+    width: auto;
+    padding: 10px;
+    font-family: "Segoe Print";
+    display: inline-block;
+}
+.options1{
+    display: inline-block;
+    padding-left: 15px;
+}
+.options2{
+    display: inline-block;
+    padding-left: 35px;
+}
+
+    /*--style all buttons--*/
+    #fillButton, #shapeButton, #directionButton, #scissorButton, 
+    #StampA, #StampB, #StampC, #rectShape, #ellipseShape, #triShape {
+        font-size: 13px;
+        background-color: azure;
+        color: darkslategray;
+        font-family: "Segoe Print";
+        border: none;
+        border-radius: 10px;
+        padding: 8px;
+        margin: 2px;
+    }
+    #fillButton:hover, #shapeButton:hover, #directionButton:hover, #scissorButton:hover, 
+    #StampA:hover, #StampB:hover, #StampC:hover, 
+    #rectShape:hover, #ellipseShape:hover, #triShape:hover {
+        background-color: skyblue;
+    }
+    #fillButton:active, #shapeButton:active, #directionButton:active, #scissorButton:active, 
+    #StampA:active, #StampB:active, #StampC:active, 
+    #rectShape:active, #ellipseShape:active, #triShape:active {
+        background-color: cornflowerblue;
+    }
+    #directionButton, #scissorButton {
+        margin-top: 30px;
+        display: block;
+        margin-left: 10px;
+    }
+
+    /*--style text for stamp size--*/
+    p {
+        display: block;
+        padding: 0px;
+        margin: 0px;
+        font-family: Segoe Print;
+        font-size: 15px;
+        color: darkslategray;
+    }
+
+/*--style colour palette--*/
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+/*--assign grid areas--*/
+.wrapper {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 73px 600px  minmax(300px, 1fr);
+    grid-template-rows: 65px minmax(500px, 1fr) 120px;
+    grid-template-areas:
+        "header header header header header"
+        "sidebar content content content content"
+        "colourP colourP options options options";
+    background-color: #fff;
+    color: #444;
+}
+
+/*--style overall theme colour of the drawing app--*/
+.box {
+    background-color: powderblue;
+    color: #fff;
+    font-size: 150%;
+}
+
+.header {
+    background-color: powderblue;
+    color: black;
+    height: 65px;
+}
+

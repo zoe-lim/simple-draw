@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <script src="sketch.js"></script>
+
+    <!--library-->
+    <script src="lib/p5.js"></script>
+
+    <!-- add extra scripts below -->
+    <script src="helpers/toolbox.js"></script>
+    <script src="helpers/colourPalette.js"></script>
+    <script src="helpers/colourPicker.js"></script>
+    <script src="helpers/helperFunctions.js"></script>
+    <script src="helpers/drawingHelper.js"></script>
+
+    <script src="Tools/freehandTool.js"></script>
+    <script src="Tools/lineToTool.js"></script>
+    <script src="Tools/sprayCanTool.js"></script>
+    <script src="Tools/mirrorDrawTool.js"></script>
+    <script src="Tools/stampTool.js"></script>
+    <script src="Tools/scissorsTool.js"></script>
+    <script src="Tools/eraserTool.js"></script>
+    <script src="Tools/shapeTool.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="StyleSheet/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+  </head>
+  <body>
+  	<div class="wrapper">
+        
+      <!--header-->
+      <div class="box header">
+        <h1>
+          <!--allow page to refresh-->
+          <a style="text-decoration:none" href="index.html" class="appName">My Drawing App</a>
+          
+          <!--create buttons to clear canvas and save image-->
+          <button id="clearButton">Clear</button>
+          <button id="saveImageButton">Save Image</button>
+          
+          <!---create colour picker & slider-->
+          <div class="topOptions">
+              
+            <!--colour picker for background colour -->
+            <label for="bgcolor">Select your background color: </label>
+            <input type="color" id="Colours" value="#ffffff">
+            
+            <!--slider to adjust stroke weight-->
+            <label for="slider">Size: </label>
+            <input type="range" class="slider" min="1" max="10" step="1" value="1" oninput="displaySliderValue(this.value)">
+            <output id="output"></output>
+              
+          </div>
+        </h1>
+      </div>
+        
+      <!--area for side bar with all the tools-->
+      <div class="box" id="sidebar"></div>
+      
+      <!--canvas-->
+      <div id="content"></div>
+      
+      <!--area for colour palette to change different colours-->
+      <div class="box colourPalette"></div>
+      
+      <!--area for additional option of different tools -->
+      <div class="box options" id="additionalOption">
+
+        <div class="options1"></div>
+        <div class="options2"></div>
+        
+      </div>
+    </div>
+  </body>
+</html>
